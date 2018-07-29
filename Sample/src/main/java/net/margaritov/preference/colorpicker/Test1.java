@@ -8,6 +8,15 @@ public class Test1 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new ColorPickerDialog(this, Color.RED).show();
+        final ColorPickerDialog colorPickerDialog = new ColorPickerDialog(this, Color.RED);
+        colorPickerDialog.setAlphaSliderVisible(true);
+        colorPickerDialog.setHexValueEnabled(true);
+        colorPickerDialog.setOnColorChangedListener(new ColorPickerDialog.OnColorChangedListener() {
+            @Override
+            public void onColorChanged(int color) {
+                System.out.println(ColorPickerPreference.convertToARGB(color));
+            }
+        });
+        colorPickerDialog.show();
     }
 }

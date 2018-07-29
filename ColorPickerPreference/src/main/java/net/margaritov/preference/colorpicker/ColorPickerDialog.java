@@ -154,12 +154,9 @@ public class ColorPickerDialog
         if (mHexValueEnabled)
             updateHexValue(color);
 
-		/*
         if (mListener != null) {
-			mListener.onColorChanged(color);
-		}
-		*/
-
+            mListener.onColorChanged(color);
+        }
     }
 
     public void setHexValueEnabled(boolean enable) {
