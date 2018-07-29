@@ -1,12 +1,14 @@
 apply plugin: 'com.android.application'
-
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 27
+    buildToolsVersion '28.0.0 rc2'
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 21
+        targetSdkVersion 27
     }
+}
 
+dependencies {
+    implementation project(':ColorPickerPreference')
 }
